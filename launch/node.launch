@@ -1,0 +1,8 @@
+<launch>
+    <arg name="flag_global_map" default='true'/>
+    <param name="flag_global_map" value="$(arg flag_global_map)"/>
+    <node name="controller_n" pkg="controller_n" type="controller_n" output="screen">
+    
+    </node>
+    <rosparam command="load" file="$(find controller_n)/config/config_real.yaml"/>
+</launch>
